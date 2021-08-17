@@ -1,0 +1,23 @@
+{
+  "name": "realtime-chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alec García Barba",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -watch",
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js"
+  },
+  "devDependencies": {
+    "@types/bad-words": "^3.0.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.6.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  }
+}
