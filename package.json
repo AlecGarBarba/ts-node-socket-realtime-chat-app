@@ -7,7 +7,8 @@
   "scripts": {
     "watch": "tsc -watch",
     "start": "node dist/index.js",
-    "dev": "nodemon dist/index.js"
+    "dev": "nodemon dist/index.js",
+    "postinstall": "tsc && mv -i -v public dist/ && rm -v -rf src"
   },
   "devDependencies": {
     "@types/bad-words": "^3.0.1",
