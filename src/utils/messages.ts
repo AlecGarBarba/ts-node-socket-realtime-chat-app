@@ -1,16 +1,26 @@
-import { LocationObject, ObjectMessage, LocationMessage } from "./types";
+import { LocationObject, MessageObject, LocationMessageObject } from "./types";
 
-export function generateMessage(text:string):ObjectMessage{
+export function generateWelcome(text:string){
     return {
-        text: text,
-        createdAt: new Date().getTime()
+        text:text,
+        createdAt: new Date().getTime(),
+        username: "Admin"
     }
 }
 
-export function generateLocationMessageObject(location: LocationObject): LocationMessage{
+export function generateMessage(username:string, text:string):MessageObject{
+    return {
+        text: text,
+        createdAt: new Date().getTime(),
+        username:username
+    }
+}
+
+export function generateLocationMessageObject(username: string, location: LocationObject): LocationMessageObject{
     return {
         url: `https://google.com/maps?q${location.latitude},${location.longitude}`,
-        createdAt: new Date().getTime()
+        createdAt: new Date().getTime(),
+        username: username
     }
 }
 
